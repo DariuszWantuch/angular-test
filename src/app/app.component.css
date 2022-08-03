@@ -1,0 +1,15 @@
+.container {
+  height: 83%;
+}
+
+@media (min-width: 992px) {
+  .container {
+    padding: 50px 80px 50px 80px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding-top: 50px;
+  }
+}

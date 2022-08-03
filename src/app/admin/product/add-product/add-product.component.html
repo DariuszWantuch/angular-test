@@ -1,0 +1,70 @@
+<div class="add-product">
+  <form [formGroup]="FormData" (ngSubmit)="onSubmit()">
+    <div class="form-group mb-4">
+      <div class="container-fluid">
+        <div class="underline-form form-group">
+          <input
+            type="text"
+            name="name"
+            class="form-control name"
+            placeholder="Product Code"
+            formControlName="productCode"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="form-group mb-4">
+      <div class="container-fluid">
+        <div class="underline-form form-group">
+          <input
+            type="text"
+            name="name"
+            class="form-control name"
+            placeholder="Product Name"
+            formControlName="productName"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="form-group mb-4">
+      <div class="container-fluid">
+        <div class="underline-form form-group">
+          <input
+            type="number"
+            name="price"
+            class="form-control contact"
+            placeholder="Product Price"
+            formControlName="productPrice"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="container-fluid">
+        <div class="underline-form form-group">
+          <select
+            name="productCatalogId"
+            id="productCatalogId"
+            class="form-control"
+            formControlName="productCatalogId"
+            ng-init=""
+          >
+            <option [ngValue]="null">Select Catalog</option>
+            <option *ngFor="let catalog of catalogs" [value]="catalog.id">
+              {{ catalog.name }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="btn-add-product">
+      <button
+        class="btn btn-outline-secondary btn-add-product"
+        type="submit"
+        [disabled]="!FormData.valid"
+      >
+        Add Product &nbsp;<i class="material-icons">add</i>
+      </button>
+    </div>
+  </form>
+</div>

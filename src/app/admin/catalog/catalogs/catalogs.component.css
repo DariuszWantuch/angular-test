@@ -1,0 +1,22 @@
+table {
+  width: 100%;
+}
+
+div.btn-add-catalog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.btn-add-catalog {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 50%;
+  }
+}
